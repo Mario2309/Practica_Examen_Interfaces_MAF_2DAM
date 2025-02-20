@@ -104,6 +104,7 @@
     <Compile Include="FormSocios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModuloCambioEstadoAlquiler.vb" />
     <Compile Include="ModuloCambioNombreFormularios.vb" />
     <Compile Include="ModuloEstadoComponentesPeliculas.vb" />
     <Compile Include="ModuloEstadoComponentesSocios.vb" />
