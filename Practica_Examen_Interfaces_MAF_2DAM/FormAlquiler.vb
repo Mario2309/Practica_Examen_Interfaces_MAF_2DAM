@@ -15,10 +15,12 @@
 
     Private Sub ConcultarAlquileresDeUnSocioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConcultarAlquileresDeUnSocioToolStripMenuItem.Click
         ModuloCambioNombreFormularios.consultarAlquileresSocioConc()
+        ModuloCambioEstadoAlquiler.alquileresSocioConc()
     End Sub
 
     Private Sub HistorialDeAlquileresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDeAlquileresToolStripMenuItem.Click
         ModuloCambioNombreFormularios.historialAlquileres()
+        ModuloCambioEstadoAlquiler.alquileresTotales()
     End Sub
 
     Private Sub FormAlquiler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
