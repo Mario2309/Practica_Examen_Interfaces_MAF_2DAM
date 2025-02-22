@@ -21,9 +21,15 @@
     Private Sub HistorialDeAlquileresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDeAlquileresToolStripMenuItem.Click
         ModuloCambioNombreFormularios.historialAlquileres()
         ModuloCambioEstadoAlquiler.alquileresTotales()
+        ModuloConexionBaseDeDatos.ConectarBD(ModuloAccionesTablaAlquileres.CadenaConsultarAlquileres)
+        ModuloAccionesTablaAlquileres.CargarAlListViewAlquiler()
     End Sub
 
     Private Sub FormAlquiler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ModuloCambioEstadoAlquiler.alquilar()
+    End Sub
+
+    Private Sub lblTituloAlquileres_Click(sender As Object, e As EventArgs) Handles lblTituloAlquileres.Click
+
     End Sub
 End Class

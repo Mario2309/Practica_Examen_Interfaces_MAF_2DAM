@@ -21,6 +21,8 @@
     Private Sub ConsultarSociosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarSociosToolStripMenuItem.Click
         ModuloCambioNombreFormularios.consultarSocios()
         ModuloEstadoComponentesSocios.consultarSocios()
+        ModuloConexionBaseDeDatos.ConectarBD(ModuloAccionesTablaSocios.CadenaConsultarSocios)
+        ModuloAccionesTablaSocios.CargarAlListViewSocios()
     End Sub
 
     Private Sub FormSocios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,4 +34,5 @@
         ModuloCambioNombreFormularios.modificarSocio()
         ModuloEstadoComponentesSocios.modificarSocio()
     End Sub
+
 End Class

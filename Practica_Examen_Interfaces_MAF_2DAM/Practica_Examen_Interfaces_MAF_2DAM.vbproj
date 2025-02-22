@@ -111,6 +111,12 @@
     <Compile Include="FormAlquiler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormGeneros.Designer.vb">
+      <DependentUpon>FormGeneros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGeneros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormPeliculas.Designer.vb">
       <DependentUpon>FormPeliculas.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="FormSocios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModuloAccionesTablaAlquileres.vb" />
+    <Compile Include="ModuloAccionesTablaPeliculas.vb" />
+    <Compile Include="ModuloAccionesTablaSocios.vb" />
     <Compile Include="ModuloCambioEstadoAlquiler.vb" />
     <Compile Include="ModuloCambioNombreFormularios.vb" />
     <Compile Include="ModuloConexionBaseDeDatos.vb" />
@@ -158,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlquiler.resx">
       <DependentUpon>FormAlquiler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGeneros.resx">
+      <DependentUpon>FormGeneros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPeliculas.resx">
       <DependentUpon>FormPeliculas.vb</DependentUpon>

@@ -26,6 +26,7 @@ Partial Class FormPeliculas
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarPeliculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarPeliculasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,8 +48,15 @@ Partial Class FormPeliculas
         Me.cbTitulo = New System.Windows.Forms.ComboBox()
         Me.lblTituloPeliculas = New System.Windows.Forms.Label()
         Me.lwPeliculas = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnBuscarPelicula = New System.Windows.Forms.Button()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.nudAnio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudCalificacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +64,7 @@ Partial Class FormPeliculas
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.ConsultarPeliculaToolStripMenuItem, Me.ConsultarPeliculasToolStripMenuItem, Me.VolverToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.GenerosToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.ConsultarPeliculaToolStripMenuItem, Me.ConsultarPeliculasToolStripMenuItem, Me.VolverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -74,6 +82,12 @@ Partial Class FormPeliculas
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'ModificarToolStripMenuItem
+        '
+        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'ConsultarPeliculaToolStripMenuItem
         '
@@ -246,6 +260,7 @@ Partial Class FormPeliculas
         '
         'lwPeliculas
         '
+        Me.lwPeliculas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7})
         Me.lwPeliculas.GridLines = True
         Me.lwPeliculas.HideSelection = False
         Me.lwPeliculas.Location = New System.Drawing.Point(37, 122)
@@ -254,6 +269,46 @@ Partial Class FormPeliculas
         Me.lwPeliculas.TabIndex = 25
         Me.lwPeliculas.UseCompatibleStateImageBehavior = False
         Me.lwPeliculas.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "TITULO"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 102
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "DIRECTOR"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 89
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ID_GENERO"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 76
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "AÑO"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 68
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "CALIFICACION"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 91
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "DESCRIPCION"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 230
         '
         'btnBuscarPelicula
         '
@@ -265,11 +320,11 @@ Partial Class FormPeliculas
         Me.btnBuscarPelicula.Text = "Buscar"
         Me.btnBuscarPelicula.UseVisualStyleBackColor = True
         '
-        'ModificarToolStripMenuItem
+        'GenerosToolStripMenuItem
         '
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
+        Me.GenerosToolStripMenuItem.Name = "GenerosToolStripMenuItem"
+        Me.GenerosToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.GenerosToolStripMenuItem.Text = "Generos"
         '
         'FormPeliculas
         '
@@ -334,4 +389,12 @@ Partial Class FormPeliculas
     Friend WithEvents lwPeliculas As ListView
     Friend WithEvents btnBuscarPelicula As Button
     Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents GenerosToolStripMenuItem As ToolStripMenuItem
 End Class

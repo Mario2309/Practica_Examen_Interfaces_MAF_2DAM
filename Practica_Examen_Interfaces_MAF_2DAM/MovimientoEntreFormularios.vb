@@ -31,4 +31,9 @@
         FormularioElecAccion.Hide()
         FormAlquiler.Show()
     End Sub
+
+    Public Sub volverGeneroPeliculas()
+        FormPeliculas.Show()
+        FormGeneros.Hide()
+    End Sub
 End Module

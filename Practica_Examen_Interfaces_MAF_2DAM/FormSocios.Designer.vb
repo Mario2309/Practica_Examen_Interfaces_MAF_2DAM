@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormSocios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormSocios
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,6 +51,16 @@ Partial Class FormSocios
         Me.cbDNI = New System.Windows.Forms.ComboBox()
         Me.lwSocios = New System.Windows.Forms.ListView()
         Me.btnBuscarSocio = New System.Windows.Forms.Button()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -113,7 +123,7 @@ Partial Class FormSocios
         '
         Me.lblTituloSocios.AutoSize = True
         Me.lblTituloSocios.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTituloSocios.Location = New System.Drawing.Point(350, 78)
+        Me.lblTituloSocios.Location = New System.Drawing.Point(360, 53)
         Me.lblTituloSocios.Name = "lblTituloSocios"
         Me.lblTituloSocios.Size = New System.Drawing.Size(73, 25)
         Me.lblTituloSocios.TabIndex = 25
@@ -281,6 +291,7 @@ Partial Class FormSocios
         '
         'lwSocios
         '
+        Me.lwSocios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.lwSocios.GridLines = True
         Me.lwSocios.HideSelection = False
         Me.lwSocios.Location = New System.Drawing.Point(39, 118)
@@ -299,6 +310,55 @@ Partial Class FormSocios
         Me.btnBuscarSocio.TabIndex = 45
         Me.btnBuscarSocio.Text = "Buscar"
         Me.btnBuscarSocio.UseVisualStyleBackColor = True
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "NOMBRE"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "APELLIDO"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "DNI"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "DIRECCION"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "TELEFONO"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "EMAIL"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "NACIMIENTO"
+        Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "REGISTRO"
+        Me.ColumnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "ESTADO"
+        Me.ColumnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FormSocios
         '
@@ -368,4 +428,14 @@ Partial Class FormSocios
     Friend WithEvents lwSocios As ListView
     Friend WithEvents btnBuscarSocio As Button
     Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
 End Class

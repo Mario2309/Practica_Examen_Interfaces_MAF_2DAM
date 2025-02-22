@@ -37,6 +37,12 @@ Partial Class FormAlquiler
         Me.lblTituloAlquileres = New System.Windows.Forms.Label()
         Me.lwAlquileres = New System.Windows.Forms.ListView()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -137,7 +143,7 @@ Partial Class FormAlquiler
         '
         Me.lblTituloAlquileres.AutoSize = True
         Me.lblTituloAlquileres.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTituloAlquileres.Location = New System.Drawing.Point(281, 46)
+        Me.lblTituloAlquileres.Location = New System.Drawing.Point(299, 44)
         Me.lblTituloAlquileres.Name = "lblTituloAlquileres"
         Me.lblTituloAlquileres.Size = New System.Drawing.Size(121, 29)
         Me.lblTituloAlquileres.TabIndex = 48
@@ -145,6 +151,7 @@ Partial Class FormAlquiler
         '
         'lwAlquileres
         '
+        Me.lwAlquileres.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.lwAlquileres.GridLines = True
         Me.lwAlquileres.HideSelection = False
         Me.lwAlquileres.Location = New System.Drawing.Point(38, 98)
@@ -163,6 +170,39 @@ Partial Class FormAlquiler
         Me.btnLimpiar.TabIndex = 50
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 39
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "SOCIO"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "PELICULA"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 71
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "FECHA_ALQUILER"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 110
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "FECHA_DEVOLUCION"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 126
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "ESTADO"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FormAlquiler
         '
@@ -205,4 +245,10 @@ Partial Class FormAlquiler
     Friend WithEvents lblTituloAlquileres As Label
     Friend WithEvents lwAlquileres As ListView
     Friend WithEvents btnLimpiar As Button
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
 End Class

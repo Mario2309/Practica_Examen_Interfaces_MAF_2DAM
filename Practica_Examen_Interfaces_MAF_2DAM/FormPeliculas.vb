@@ -21,6 +21,8 @@
     Private Sub ConsultarPeliculasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarPeliculasToolStripMenuItem.Click
         ModuloCambioNombreFormularios.consultarPeliculas()
         ModuloEstadoComponentesPeliculas.consultarPeliculas()
+        ModuloConexionBaseDeDatos.ConectarBD(ModuloAccionesTablaPeliculas.CadenaConsultarPeliculas)
+        ModuloAccionesTablaPeliculas.CargarAlListViewPeliculas()
     End Sub
 
     Private Sub FormPeliculas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -31,5 +33,12 @@
     Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem.Click
         ModuloCambioNombreFormularios.modificarPelicula()
         ModuloEstadoComponentesPeliculas.modificarrPelicula()
+    End Sub
+
+    Private Sub GenerosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerosToolStripMenuItem.Click
+        FormGeneros.Show()
+        Me.Hide()
+        ModuloConexionBaseDeDatos.ConectarBD(ModuloConexionBaseDeDatos.CadenaConsultarGeneros)
+        ModuloConexionBaseDeDatos.CargarAlListViewGeneros()
     End Sub
 End Class

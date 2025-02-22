@@ -32,6 +32,7 @@
     Public Sub alquileresSocioConc()
         FormAlquiler.Width = 557
         FormAlquiler.Height = 373
+        FormAlquiler.lblTituloAlquileres.Location = New Point(299, FormAlquiler.lblTituloAlquileres.Location.Y)
         FormAlquiler.btnAccionAlquileres.Visible = False
         FormAlquiler.lblTituloAlquileres.Visible = True
         FormAlquiler.btnBuscarDNI.Visible = True
@@ -46,6 +47,7 @@
     Public Sub alquileresTotales()
         FormAlquiler.Width = 557
         FormAlquiler.Height = 373
+        FormAlquiler.lblTituloAlquileres.Location = New Point(212, FormAlquiler.lblTituloAlquileres.Location.Y)
         FormAlquiler.btnAccionAlquileres.Visible = False
         FormAlquiler.lblTituloAlquileres.Visible = True
         FormAlquiler.btnBuscarDNI.Visible = False
