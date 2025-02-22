@@ -4,6 +4,7 @@
         FormPeliculas.cbTitulo.Visible = False
         FormPeliculas.btnBuscarPelicula.Visible = False
         FormPeliculas.tbTitulo.Enabled = True
+        FormPeliculas.tbTitulo.Visible = True
         FormPeliculas.cbTitulo.Enabled = False
         FormPeliculas.tbDirector.Enabled = True
         FormPeliculas.cbGenero.Enabled = True
@@ -21,6 +22,11 @@
         FormPeliculas.lblGenero.Visible = True
         FormPeliculas.lblCalificacion.Visible = True
         FormPeliculas.lblDescripcion.Visible = True
+        FormPeliculas.tbDirector.Visible = True
+        FormPeliculas.cbGenero.Visible = True
+        FormPeliculas.nudAnio.Visible = True
+        FormPeliculas.nudCalificacion.Visible = True
+        FormPeliculas.tbDescripcion.Visible = True
     End Sub
     Public Sub eliminarPelicula()
         FormPeliculas.tbTitulo.Visible = False
@@ -44,6 +50,11 @@
         FormPeliculas.lblGenero.Visible = True
         FormPeliculas.lblCalificacion.Visible = True
         FormPeliculas.lblDescripcion.Visible = True
+        FormPeliculas.tbDirector.Visible = True
+        FormPeliculas.cbGenero.Visible = True
+        FormPeliculas.nudAnio.Visible = True
+        FormPeliculas.nudCalificacion.Visible = True
+        FormPeliculas.tbDescripcion.Visible = True
     End Sub
     Public Sub modificarrPelicula()
         FormPeliculas.tbTitulo.Visible = False
@@ -67,6 +78,11 @@
         FormPeliculas.lblGenero.Visible = True
         FormPeliculas.lblCalificacion.Visible = True
         FormPeliculas.lblDescripcion.Visible = True
+        FormPeliculas.tbDirector.Visible = True
+        FormPeliculas.cbGenero.Visible = True
+        FormPeliculas.nudAnio.Visible = True
+        FormPeliculas.nudCalificacion.Visible = True
+        FormPeliculas.tbDescripcion.Visible = True
     End Sub
     Public Sub consultarPeliculaConc()
         FormPeliculas.tbTitulo.Visible = False
@@ -90,6 +106,11 @@
         FormPeliculas.lblGenero.Visible = True
         FormPeliculas.lblCalificacion.Visible = True
         FormPeliculas.lblDescripcion.Visible = True
+        FormPeliculas.tbDirector.Visible = True
+        FormPeliculas.cbGenero.Visible = True
+        FormPeliculas.nudAnio.Visible = True
+        FormPeliculas.nudCalificacion.Visible = True
+        FormPeliculas.tbDescripcion.Visible = True
     End Sub
     Public Sub consultarPeliculas()
         FormPeliculas.cbTitulo.Visible = False

@@ -9,6 +9,7 @@
         FormAlquiler.lblDNI.Visible = True
         FormAlquiler.lbPelicula.Visible = True
         FormAlquiler.cbPeliculas.Visible = True
+        FormAlquiler.cbPeliculas.Enabled = True
         FormAlquiler.tbDNI.Visible = True
         FormAlquiler.lwAlquileres.Visible = False
         FormAlquiler.btnLimpiar.Visible = False
@@ -20,10 +21,11 @@
         FormAlquiler.btnAccionAlquileres.Text = "Devolver"
         FormAlquiler.btnAccionAlquileres.Visible = True
         FormAlquiler.lblTituloAlquileres.Visible = False
-        FormAlquiler.btnBuscarDNI.Visible = False
+        FormAlquiler.btnBuscarDNI.Visible = True
         FormAlquiler.lblDNI.Visible = True
         FormAlquiler.lbPelicula.Visible = True
         FormAlquiler.cbPeliculas.Visible = True
+        FormAlquiler.cbPeliculas.Enabled = False
         FormAlquiler.tbDNI.Visible = True
         FormAlquiler.lwAlquileres.Visible = False
         FormAlquiler.btnLimpiar.Visible = False
@@ -56,7 +58,7 @@
         FormAlquiler.cbPeliculas.Visible = False
         FormAlquiler.tbDNI.Visible = False
         FormAlquiler.lwAlquileres.Visible = True
-        FormAlquiler.btnLimpiar.Visible = True
+        FormAlquiler.btnLimpiar.Visible = False
     End Sub
 
 End Module
