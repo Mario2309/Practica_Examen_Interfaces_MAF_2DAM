@@ -25,6 +25,7 @@ Partial Class FormSocios
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarSocioConcretoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarSociosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,7 +51,6 @@ Partial Class FormSocios
         Me.cbDNI = New System.Windows.Forms.ComboBox()
         Me.lwSocios = New System.Windows.Forms.ListView()
         Me.btnBuscarSocio = New System.Windows.Forms.Button()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,6 +74,12 @@ Partial Class FormSocios
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'ModificarToolStripMenuItem
+        '
+        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'ConsultarSocioConcretoToolStripMenuItem
         '
@@ -275,12 +281,14 @@ Partial Class FormSocios
         '
         'lwSocios
         '
+        Me.lwSocios.GridLines = True
         Me.lwSocios.HideSelection = False
         Me.lwSocios.Location = New System.Drawing.Point(39, 118)
         Me.lwSocios.Name = "lwSocios"
         Me.lwSocios.Size = New System.Drawing.Size(721, 276)
         Me.lwSocios.TabIndex = 44
         Me.lwSocios.UseCompatibleStateImageBehavior = False
+        Me.lwSocios.View = System.Windows.Forms.View.Details
         '
         'btnBuscarSocio
         '
@@ -291,12 +299,6 @@ Partial Class FormSocios
         Me.btnBuscarSocio.TabIndex = 45
         Me.btnBuscarSocio.Text = "Buscar"
         Me.btnBuscarSocio.UseVisualStyleBackColor = True
-        '
-        'ModificarToolStripMenuItem
-        '
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'FormSocios
         '
