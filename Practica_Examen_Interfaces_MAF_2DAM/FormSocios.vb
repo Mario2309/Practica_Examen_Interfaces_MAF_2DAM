@@ -35,4 +35,11 @@
         ModuloEstadoComponentesSocios.modificarSocio()
     End Sub
 
+    Private Sub btnLimpiezaSocio_Click(sender As Object, e As EventArgs) Handles btnLimpiezaSocio.Click
+        ModuloAccionesTablaSocios.limpiar()
+    End Sub
+
+    Private Sub btnAccionSocio_Click(sender As Object, e As EventArgs) Handles btnAccionSocio.Click
+        ModuloAccionesTablaSocios.Agregar()
+    End Sub
 End Class

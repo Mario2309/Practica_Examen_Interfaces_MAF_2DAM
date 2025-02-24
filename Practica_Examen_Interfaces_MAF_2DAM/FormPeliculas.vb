@@ -41,4 +41,12 @@
         ModuloConexionBaseDeDatos.ConectarBD(ModuloConexionBaseDeDatos.CadenaConsultarGeneros)
         ModuloConexionBaseDeDatos.CargarAlListViewGeneros()
     End Sub
+
+    Private Sub btnLimpiezaPeliculas_Click(sender As Object, e As EventArgs) Handles btnLimpiezaPeliculas.Click
+        ModuloAccionesTablaPeliculas.limpiar()
+    End Sub
+
+    Private Sub btnAccionPelicula_Click(sender As Object, e As EventArgs) Handles btnAccionPelicula.Click
+        ModuloEstadoComponentesPeliculas.accionBtn()
+    End Sub
 End Class

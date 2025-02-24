@@ -32,4 +32,8 @@
     Private Sub lblTituloAlquileres_Click(sender As Object, e As EventArgs) Handles lblTituloAlquileres.Click
 
     End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        ModuloAccionesTablaAlquileres.limpiar()
+    End Sub
 End Class

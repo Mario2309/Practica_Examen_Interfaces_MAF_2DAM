@@ -30,19 +30,19 @@ Partial Class FormAlquiler
         Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblDNI = New System.Windows.Forms.Label()
         Me.lbPelicula = New System.Windows.Forms.Label()
-        Me.tbDNI = New System.Windows.Forms.TextBox()
         Me.cbPeliculas = New System.Windows.Forms.ComboBox()
         Me.btnAccionAlquileres = New System.Windows.Forms.Button()
         Me.btnBuscarDNI = New System.Windows.Forms.Button()
         Me.lblTituloAlquileres = New System.Windows.Forms.Label()
         Me.lwAlquileres = New System.Windows.Forms.ListView()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.tbDNI = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -105,13 +105,6 @@ Partial Class FormAlquiler
         Me.lbPelicula.TabIndex = 2
         Me.lbPelicula.Text = "Pelicula: "
         '
-        'tbDNI
-        '
-        Me.tbDNI.Location = New System.Drawing.Point(91, 52)
-        Me.tbDNI.Name = "tbDNI"
-        Me.tbDNI.Size = New System.Drawing.Size(100, 20)
-        Me.tbDNI.TabIndex = 3
-        '
         'cbPeliculas
         '
         Me.cbPeliculas.FormattingEnabled = True
@@ -161,16 +154,6 @@ Partial Class FormAlquiler
         Me.lwAlquileres.UseCompatibleStateImageBehavior = False
         Me.lwAlquileres.View = System.Windows.Forms.View.Details
         '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnLimpiar.Location = New System.Drawing.Point(208, 225)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(111, 35)
-        Me.btnLimpiar.TabIndex = 50
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
-        '
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "ID"
@@ -203,6 +186,23 @@ Partial Class FormAlquiler
         '
         Me.ColumnHeader6.Text = "ESTADO"
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnLimpiar.Location = New System.Drawing.Point(208, 225)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(111, 35)
+        Me.btnLimpiar.TabIndex = 50
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'tbDNI
+        '
+        Me.tbDNI.Location = New System.Drawing.Point(91, 52)
+        Me.tbDNI.Name = "tbDNI"
+        Me.tbDNI.Size = New System.Drawing.Size(100, 20)
+        Me.tbDNI.TabIndex = 3
         '
         'FormAlquiler
         '
@@ -238,7 +238,6 @@ Partial Class FormAlquiler
     Friend WithEvents VolverToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblDNI As Label
     Friend WithEvents lbPelicula As Label
-    Friend WithEvents tbDNI As TextBox
     Friend WithEvents cbPeliculas As ComboBox
     Friend WithEvents btnAccionAlquileres As Button
     Friend WithEvents btnBuscarDNI As Button
@@ -251,4 +250,5 @@ Partial Class FormAlquiler
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents tbDNI As TextBox
 End Class

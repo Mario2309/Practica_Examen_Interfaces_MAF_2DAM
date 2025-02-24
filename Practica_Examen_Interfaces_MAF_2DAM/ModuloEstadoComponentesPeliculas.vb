@@ -133,4 +133,10 @@
         FormPeliculas.lblCalificacion.Visible = False
         FormPeliculas.lblDescripcion.Visible = False
     End Sub
+
+    Public Sub accionBtn()
+        If FormPeliculas.Text = "Agregar Pelicula" Then
+            ModuloAccionesTablaPeliculas.Agregar()
+        End If
+    End Sub
 End Module

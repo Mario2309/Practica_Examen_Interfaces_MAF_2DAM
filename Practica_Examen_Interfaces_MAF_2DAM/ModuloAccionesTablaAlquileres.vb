@@ -20,6 +20,9 @@
         Next
     End Sub
 
-
+    Public Sub limpiar()
+        FormAlquiler.tbDNI.Clear()
+        FormAlquiler.cbPeliculas.SelectedIndex = 0
+    End Sub
 
 End Module

@@ -50,7 +50,6 @@ Partial Class FormSocios
         Me.btnAccionSocio = New System.Windows.Forms.Button()
         Me.cbDNI = New System.Windows.Forms.ComboBox()
         Me.lwSocios = New System.Windows.Forms.ListView()
-        Me.btnBuscarSocio = New System.Windows.Forms.Button()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -61,6 +60,7 @@ Partial Class FormSocios
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnBuscarSocio = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -294,22 +294,12 @@ Partial Class FormSocios
         Me.lwSocios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.lwSocios.GridLines = True
         Me.lwSocios.HideSelection = False
-        Me.lwSocios.Location = New System.Drawing.Point(39, 118)
+        Me.lwSocios.Location = New System.Drawing.Point(37, 77)
         Me.lwSocios.Name = "lwSocios"
         Me.lwSocios.Size = New System.Drawing.Size(721, 276)
         Me.lwSocios.TabIndex = 44
         Me.lwSocios.UseCompatibleStateImageBehavior = False
         Me.lwSocios.View = System.Windows.Forms.View.Details
-        '
-        'btnBuscarSocio
-        '
-        Me.btnBuscarSocio.Font = New System.Drawing.Font("Modern No. 20", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarSocio.Location = New System.Drawing.Point(309, 81)
-        Me.btnBuscarSocio.Name = "btnBuscarSocio"
-        Me.btnBuscarSocio.Size = New System.Drawing.Size(69, 27)
-        Me.btnBuscarSocio.TabIndex = 45
-        Me.btnBuscarSocio.Text = "Buscar"
-        Me.btnBuscarSocio.UseVisualStyleBackColor = True
         '
         'ColumnHeader1
         '
@@ -359,6 +349,16 @@ Partial Class FormSocios
         '
         Me.ColumnHeader10.Text = "ESTADO"
         Me.ColumnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnBuscarSocio
+        '
+        Me.btnBuscarSocio.Font = New System.Drawing.Font("Modern No. 20", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarSocio.Location = New System.Drawing.Point(309, 81)
+        Me.btnBuscarSocio.Name = "btnBuscarSocio"
+        Me.btnBuscarSocio.Size = New System.Drawing.Size(69, 27)
+        Me.btnBuscarSocio.TabIndex = 45
+        Me.btnBuscarSocio.Text = "Buscar"
+        Me.btnBuscarSocio.UseVisualStyleBackColor = True
         '
         'FormSocios
         '

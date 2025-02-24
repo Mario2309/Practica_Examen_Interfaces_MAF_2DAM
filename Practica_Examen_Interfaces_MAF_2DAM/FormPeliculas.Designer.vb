@@ -25,6 +25,7 @@ Partial Class FormPeliculas
         Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarPeliculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,7 +57,6 @@ Partial Class FormPeliculas
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnBuscarPelicula = New System.Windows.Forms.Button()
-        Me.GenerosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.nudAnio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudCalificacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,6 +76,12 @@ Partial Class FormPeliculas
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
         Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
+        '
+        'GenerosToolStripMenuItem
+        '
+        Me.GenerosToolStripMenuItem.Name = "GenerosToolStripMenuItem"
+        Me.GenerosToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.GenerosToolStripMenuItem.Text = "Generos"
         '
         'EliminarToolStripMenuItem
         '
@@ -319,12 +325,6 @@ Partial Class FormPeliculas
         Me.btnBuscarPelicula.TabIndex = 46
         Me.btnBuscarPelicula.Text = "Buscar"
         Me.btnBuscarPelicula.UseVisualStyleBackColor = True
-        '
-        'GenerosToolStripMenuItem
-        '
-        Me.GenerosToolStripMenuItem.Name = "GenerosToolStripMenuItem"
-        Me.GenerosToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.GenerosToolStripMenuItem.Text = "Generos"
         '
         'FormPeliculas
         '
