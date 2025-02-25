@@ -11,6 +11,7 @@
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
         ModuloCambioNombreFormularios.eliminarSocio()
         ModuloEstadoComponentesSocios.eliminarSocio()
+        ModuloAccionesTablaSocios.cargarNombresAlComboBox()
     End Sub
 
     Private Sub ConsultarSocioConcretoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarSocioConcretoToolStripMenuItem.Click

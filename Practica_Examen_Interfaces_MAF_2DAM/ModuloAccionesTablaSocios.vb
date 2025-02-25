@@ -6,6 +6,10 @@ Module ModuloAccionesTablaSocios
     Public CadenaInsertarReg As String = "INSERT INTO Socios (Nombre, Apellido, DNI, Direccion, Telefono, Email, Fecha_Nacimiento, Fecha_Registro, Estado) VALUES (@Nm, @Apl, @DNI, @Dir, @Tel, @Eml, @fN, @fR, @est)"
     Public CadenaModificar As String = "update Peliculas set titulo=@Tl, director=@Dir, id_genero=@IdGen,  anio_publicacion=@Anio, calificacion=@Cal, descripcion=@Desc where num_registro=@idP"
     Public CadenaEliminarReg As String = "delete from Peliculas where num_registro=@idP"
+    Public cadenaConsultarDNIs As String = "SELECT DNI FROM Socios"
+    Public cadenaConsIdPorTitulo As String = "SELECT ID_Socio FROM Socios WHERE DNI = @dni"
+
+
 
     Public Sub CargarAlListViewSocios()
         Dim ListaPeliculas As ListViewItem
@@ -113,5 +117,73 @@ Module ModuloAccionesTablaSocios
             Exit Sub
         End If
     End Sub
+
+    Public Sub cargarNombresAlComboBox()
+        Try
+            ' Verificar conexión
+            If ModuloConexionBaseDeDatos.ConexionNueva.State = ConnectionState.Closed Then
+                ModuloConexionBaseDeDatos.ConexionNueva.Open()
+            End If
+
+            ' Crear comando SQL
+            Dim Comando As New SQLiteCommand(cadenaConsultarDNIs, ModuloConexionBaseDeDatos.ConexionNueva)
+
+            ' Ejecutar el comando y obtener los resultados
+            Dim lector As SQLiteDataReader = Comando.ExecuteReader()
+
+            ' Limpiar el ComboBox antes de agregar los nuevos elementos
+            FormSocios.cbDNI.Items.Clear()
+
+            ' Leer los resultados y agregar al ComboBox
+            While lector.Read()
+                ' Supongamos que el título está en la primera columna (índice 0)
+                FormSocios.cbDNI.Items.Add(lector.GetString(0))
+            End While
+
+            ' Cerrar el lector
+            lector.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error al agregar datos: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Cerrar conexión
+            If ModuloConexionBaseDeDatos.ConexionNueva.State = ConnectionState.Open Then
+                ModuloConexionBaseDeDatos.ConexionNueva.Close()
+            End If
+        End Try
+    End Sub
+
+    Public Function devolverIdMedianteDNI(dni As String) As Integer
+        Dim id As Integer = -1 ' Valor por defecto en caso de no encontrar el resultado
+        Try
+            ' Verificar conexión
+            If ModuloConexionBaseDeDatos.ConexionNueva.State = ConnectionState.Closed Then
+                ModuloConexionBaseDeDatos.ConexionNueva.Open()
+            End If
+
+            ' Crear comando SQL
+            Dim Comando As New SQLiteCommand(cadenaConsIdPorTitulo, ModuloConexionBaseDeDatos.ConexionNueva)
+
+            ' Agregar parámetro al comando SQL
+            Comando.Parameters.AddWithValue("@dni", dni)
+
+            ' Ejecutar el comando y obtener el resultado
+            Dim lector As SQLiteDataReader = Comando.ExecuteReader()
+
+            ' Si encontramos un registro, obtener el id
+            If lector.Read() Then
+                id = lector.GetInt32(0) ' Suponiendo que el id está en la primera columna (índice 0)
+            End If
+
+            ' Cerrar el lector
+            lector.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error al obtener el ID: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        ' Retornar el id (o -1 si no se encontró)
+        Return id
+    End Function
 
 End Module
