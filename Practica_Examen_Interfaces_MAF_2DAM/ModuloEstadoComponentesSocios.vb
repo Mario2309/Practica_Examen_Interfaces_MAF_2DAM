@@ -150,5 +150,17 @@
         FormSocios.cbEstado.Visible = False
         FormSocios.lblTituloSocios.Visible = True
         FormSocios.lwSocios.Visible = True
+        FormSocios.btnAccionSocio.Visible = False
+        FormSocios.btnLimpiezaSocio.Visible = False
+    End Sub
+
+    Public Sub acctionBtn()
+        If FormSocios.Text = "Agregar Socio" Then
+            ModuloAccionesTablaSocios.Agregar()
+        ElseIf FormSocios.Text = "Eliminar Socio" Then
+            ModuloAccionesTablaSocios.eliminar()
+        ElseIf FormSocios.Text = "Modificar Socio" Then
+            ModuloAccionesTablaSocios.Modificar()
+        End If
     End Sub
 End Module

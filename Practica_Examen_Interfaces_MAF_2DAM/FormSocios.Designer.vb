@@ -294,7 +294,7 @@ Partial Class FormSocios
         Me.lwSocios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.lwSocios.GridLines = True
         Me.lwSocios.HideSelection = False
-        Me.lwSocios.Location = New System.Drawing.Point(37, 77)
+        Me.lwSocios.Location = New System.Drawing.Point(34, 97)
         Me.lwSocios.Name = "lwSocios"
         Me.lwSocios.Size = New System.Drawing.Size(721, 276)
         Me.lwSocios.TabIndex = 44
