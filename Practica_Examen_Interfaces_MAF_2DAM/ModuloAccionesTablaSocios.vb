@@ -12,6 +12,7 @@ Module ModuloAccionesTablaSocios
 
 
 
+
     Public Sub CargarAlListViewSocios()
         Dim ListaPeliculas As ListViewItem
 

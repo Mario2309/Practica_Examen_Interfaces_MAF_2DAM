@@ -6,7 +6,7 @@ Module ModuloAccionesTablaAlquileres
     Public CadenaConIdPeli As String = "SELECT id_pelicula FROM Alquileres WHERE id_socio = @idS"
     Public cadenaConsultarTitulos As String = "SELECT titulo FROM peliculas"
     Private CadenaConsultarPelisAlquiladas As String = "SELECT peliculas.titulo FROM Alquileres INNER JOIN peliculas ON Alquileres.id_pelicula = peliculas.id_peliculas WHERE Alquileres.id_socio = @idS AND estado = 'Alquilado' "
-    Private cadenaUpdateEstado As String = "update Alquileres set estado=@est WHERE id_socio=@idS AND id_pelicula=@idP"
+    Private cadenaUpdateEstado As String = "update Alquileres set fecha_devolucion=@fD, estado=@est WHERE id_socio=@idS AND id_pelicula=@idP"
 
     Public Sub CargarAlListViewAlquiler()
         Dim ListaPeliculas As ListViewItem
@@ -233,6 +233,7 @@ Module ModuloAccionesTablaAlquileres
                 ' Asignar parámetros (sin @idPel si es autoincremento)
                 Comando.Parameters.AddWithValue("@idS", idSocio)
                 Comando.Parameters.AddWithValue("@idP", ModuloAccionesTablaPeliculas.devolverIdMedianteTitulo(FormAlquiler.cbPeliculas.Text.Trim()))
+                Comando.Parameters.AddWithValue("@fD", fechaDevolucion)
                 Comando.Parameters.AddWithValue("@est", "Devuelto")
 
                 ' Ejecutar la consulta directamente
