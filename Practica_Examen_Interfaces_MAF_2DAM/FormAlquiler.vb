@@ -26,6 +26,7 @@
     End Sub
 
     Private Sub FormAlquiler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ModuloCambioNombreFormularios.alquilar()
         ModuloCambioEstadoAlquiler.alquilar()
     End Sub
 
@@ -35,5 +36,9 @@
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         ModuloAccionesTablaAlquileres.limpiar()
+    End Sub
+
+    Private Sub btnAccionAlquileres_Click(sender As Object, e As EventArgs) Handles btnAccionAlquileres.Click
+        ModuloCambioEstadoAlquiler.accionBnt()
     End Sub
 End Class

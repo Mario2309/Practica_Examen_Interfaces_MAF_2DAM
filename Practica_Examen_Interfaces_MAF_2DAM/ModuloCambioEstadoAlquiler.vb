@@ -61,4 +61,10 @@
         FormAlquiler.btnLimpiar.Visible = False
     End Sub
 
+
+    Public Sub accionBnt()
+        If FormAlquiler.Text = "Alquilar Pelicula" Then
+            ModuloAccionesTablaAlquileres.Agregar()
+        End If
+    End Sub
 End Module

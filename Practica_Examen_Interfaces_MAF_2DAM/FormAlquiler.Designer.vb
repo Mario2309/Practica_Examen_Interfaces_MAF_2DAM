@@ -147,7 +147,7 @@ Partial Class FormAlquiler
         Me.lwAlquileres.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.lwAlquileres.GridLines = True
         Me.lwAlquileres.HideSelection = False
-        Me.lwAlquileres.Location = New System.Drawing.Point(38, 98)
+        Me.lwAlquileres.Location = New System.Drawing.Point(38, 100)
         Me.lwAlquileres.Name = "lwAlquileres"
         Me.lwAlquileres.Size = New System.Drawing.Size(470, 102)
         Me.lwAlquileres.TabIndex = 49

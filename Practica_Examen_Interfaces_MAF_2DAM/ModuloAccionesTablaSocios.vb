@@ -44,7 +44,21 @@ Module ModuloAccionesTablaSocios
             End If
 
             ' Validar campos
-            ' validarCampos()
+
+            ' Convertir valores de fecha de alquiler
+            Dim fechaAlquiler As Date
+
+            ' Obtener la fecha actual del sistema
+            Dim fechaActual As Date = DateTime.Now
+
+            ' Usar el año ingresado para crear la fecha de alquiler con la fecha actual (mes y día del sistema)
+            fechaAlquiler = New Date(fechaActual.Year, fechaActual.Month, fechaActual.Day)
+
+            ' Verificar que la fecha es válida (esto no es estrictamente necesario si sabes que el año es válido)
+            If fechaAlquiler > DateTime.Now Then
+                MessageBox.Show("La fecha de alquiler no puede ser en el futuro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
 
             ' Crear comando SQL
             Dim Comando As New SQLiteCommand(CadenaInsertarReg, ModuloConexionBaseDeDatos.ConexionNueva)
@@ -61,10 +75,10 @@ Module ModuloAccionesTablaSocios
             Comando.Parameters.AddWithValue("@fN", FormSocios.dtpNacimiento.Value)
 
             ' Registrar la fecha actual correctamente
-            Comando.Parameters.AddWithValue("@fR", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
+            Comando.Parameters.AddWithValue("@fR", fechaAlquiler)
 
             ' Asignar el estado
-            Comando.Parameters.AddWithValue("@est", FormSocios.cbEstado.SelectedValue)
+            Comando.Parameters.AddWithValue("@est", FormSocios.cbEstado.Text.Trim())
 
             ' Ejecutar la consulta directamente
             Dim filasAfectadas As Integer = Comando.ExecuteNonQuery()
