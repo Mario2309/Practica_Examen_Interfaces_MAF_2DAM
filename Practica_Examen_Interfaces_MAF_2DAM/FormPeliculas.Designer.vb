@@ -120,7 +120,7 @@ Partial Class FormPeliculas
         '
         'btnAccionPelicula
         '
-        Me.btnAccionPelicula.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnAccionPelicula.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnAccionPelicula.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.btnAccionPelicula.Location = New System.Drawing.Point(263, 377)
         Me.btnAccionPelicula.Name = "btnAccionPelicula"
@@ -130,7 +130,7 @@ Partial Class FormPeliculas
         '
         'btnLimpiezaPeliculas
         '
-        Me.btnLimpiezaPeliculas.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnLimpiezaPeliculas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnLimpiezaPeliculas.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.btnLimpiezaPeliculas.Location = New System.Drawing.Point(453, 377)
         Me.btnLimpiezaPeliculas.Name = "btnLimpiezaPeliculas"
@@ -142,60 +142,60 @@ Partial Class FormPeliculas
         'lblTituloPelicula
         '
         Me.lblTituloPelicula.AutoSize = True
-        Me.lblTituloPelicula.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTituloPelicula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTituloPelicula.Location = New System.Drawing.Point(78, 82)
         Me.lblTituloPelicula.Name = "lblTituloPelicula"
-        Me.lblTituloPelicula.Size = New System.Drawing.Size(68, 21)
+        Me.lblTituloPelicula.Size = New System.Drawing.Size(66, 24)
         Me.lblTituloPelicula.TabIndex = 11
         Me.lblTituloPelicula.Text = "Titulo: "
         '
         'lblDirector
         '
         Me.lblDirector.AutoSize = True
-        Me.lblDirector.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDirector.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDirector.Location = New System.Drawing.Point(412, 82)
         Me.lblDirector.Name = "lblDirector"
-        Me.lblDirector.Size = New System.Drawing.Size(84, 21)
+        Me.lblDirector.Size = New System.Drawing.Size(85, 24)
         Me.lblDirector.TabIndex = 12
         Me.lblDirector.Text = "Director: "
         '
         'lblGenero
         '
         Me.lblGenero.AutoSize = True
-        Me.lblGenero.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGenero.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGenero.Location = New System.Drawing.Point(72, 156)
         Me.lblGenero.Name = "lblGenero"
-        Me.lblGenero.Size = New System.Drawing.Size(74, 21)
+        Me.lblGenero.Size = New System.Drawing.Size(84, 24)
         Me.lblGenero.TabIndex = 13
         Me.lblGenero.Text = "Genero: "
         '
         'lblAnio
         '
         Me.lblAnio.AutoSize = True
-        Me.lblAnio.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAnio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAnio.Location = New System.Drawing.Point(445, 156)
         Me.lblAnio.Name = "lblAnio"
-        Me.lblAnio.Size = New System.Drawing.Size(51, 21)
+        Me.lblAnio.Size = New System.Drawing.Size(55, 24)
         Me.lblAnio.TabIndex = 14
         Me.lblAnio.Text = "Año: "
         '
         'lblCalificacion
         '
         Me.lblCalificacion.AutoSize = True
-        Me.lblCalificacion.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCalificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCalificacion.Location = New System.Drawing.Point(33, 226)
         Me.lblCalificacion.Name = "lblCalificacion"
-        Me.lblCalificacion.Size = New System.Drawing.Size(113, 21)
+        Me.lblCalificacion.Size = New System.Drawing.Size(115, 24)
         Me.lblCalificacion.TabIndex = 15
         Me.lblCalificacion.Text = "Calificacion: "
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDescripcion.Location = New System.Drawing.Point(385, 226)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(111, 21)
+        Me.lblDescripcion.Size = New System.Drawing.Size(120, 24)
         Me.lblDescripcion.TabIndex = 16
         Me.lblDescripcion.Text = "Descripción: "
         '
@@ -257,10 +257,10 @@ Partial Class FormPeliculas
         'lblTituloPeliculas
         '
         Me.lblTituloPeliculas.AutoSize = True
-        Me.lblTituloPeliculas.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTituloPeliculas.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTituloPeliculas.Location = New System.Drawing.Point(349, 76)
         Me.lblTituloPeliculas.Name = "lblTituloPeliculas"
-        Me.lblTituloPeliculas.Size = New System.Drawing.Size(104, 25)
+        Me.lblTituloPeliculas.Size = New System.Drawing.Size(111, 29)
         Me.lblTituloPeliculas.TabIndex = 24
         Me.lblTituloPeliculas.Text = "Peliculas"
         '
@@ -318,7 +318,7 @@ Partial Class FormPeliculas
         '
         'btnBuscarPelicula
         '
-        Me.btnBuscarPelicula.Font = New System.Drawing.Font("Modern No. 20", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarPelicula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarPelicula.Location = New System.Drawing.Point(296, 78)
         Me.btnBuscarPelicula.Name = "btnBuscarPelicula"
         Me.btnBuscarPelicula.Size = New System.Drawing.Size(69, 27)

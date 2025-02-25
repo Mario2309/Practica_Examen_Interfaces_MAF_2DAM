@@ -5,12 +5,14 @@
 
     Private Sub AgregarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem.Click
         ModuloCambioNombreFormularios.agregarPelicula()
+        ModuloAccionesTablaGeneros.cargarGenerosAlComboBox()
         ModuloEstadoComponentesPeliculas.agregarPelicula()
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
         ModuloCambioNombreFormularios.eliminarPelicula()
         ModuloEstadoComponentesPeliculas.eliminarPelicula()
+        ModuloAccionesTablaPeliculas.cargarTitulosAlComboBox()
     End Sub
 
     Private Sub ConsultarPeliculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarPeliculaToolStripMenuItem.Click
@@ -27,6 +29,7 @@
 
     Private Sub FormPeliculas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ModuloCambioNombreFormularios.agregarPelicula()
+        ModuloAccionesTablaGeneros.cargarGenerosAlComboBox()
         ModuloEstadoComponentesPeliculas.agregarPelicula()
     End Sub
 
@@ -38,8 +41,8 @@
     Private Sub GenerosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerosToolStripMenuItem.Click
         FormGeneros.Show()
         Me.Hide()
-        ModuloConexionBaseDeDatos.ConectarBD(ModuloConexionBaseDeDatos.CadenaConsultarGeneros)
-        ModuloConexionBaseDeDatos.CargarAlListViewGeneros()
+        ModuloConexionBaseDeDatos.ConectarBD(ModuloAccionesTablaGeneros.CadenaConsultarGeneros)
+        ModuloAccionesTablaGeneros.CargarAlListViewGeneros()
     End Sub
 
     Private Sub btnLimpiezaPeliculas_Click(sender As Object, e As EventArgs) Handles btnLimpiezaPeliculas.Click
@@ -48,5 +51,9 @@
 
     Private Sub btnAccionPelicula_Click(sender As Object, e As EventArgs) Handles btnAccionPelicula.Click
         ModuloEstadoComponentesPeliculas.accionBtn()
+    End Sub
+
+    Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
+        ModuloAccionesTablaPeliculas.cargarCampos(ModuloAccionesTablaPeliculas.devolverIdMedianteTitulo(cbTitulo.Text.Trim()))
     End Sub
 End Class

@@ -130,6 +130,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuloAccionesTablaAlquileres.vb" />
+    <Compile Include="ModuloAccionesTablaGeneros.vb" />
     <Compile Include="ModuloAccionesTablaPeliculas.vb" />
     <Compile Include="ModuloAccionesTablaSocios.vb" />
     <Compile Include="ModuloCambioEstadoAlquiler.vb" />
