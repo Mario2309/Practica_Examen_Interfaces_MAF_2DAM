@@ -7,7 +7,7 @@ Module ModuloAccionesTablaPeliculas
     Private CadenaInsertarReg As String = "INSERT INTO peliculas (titulo, director, id_genero, anio, calificacion, descripcion) VALUES (@Tl, @Dir, @IdGen, @Anio, @Cal, @Desc)"
     Private CadenaModificar As String = "update peliculas set titulo=@Tl, director=@Dir, id_genero=@IdGen,  anio=@Anio, calificacion=@Cal, descripcion=@Desc where id_peliculas=@idP"
     Private CadenaEliminarReg As String = "delete from peliculas where id_peliculas=@idP"
-    Private cadenaConsultarTitulos As String = "SELECT titulo FROM peliculas"
+    Public cadenaConsultarTitulos As String = "SELECT titulo FROM peliculas"
     Private cadenaConsIdPorTitulo As String = "SELECT id_peliculas FROM peliculas WHERE titulo = @Tl"
 
     Public Sub CargarAlListViewPeliculas()

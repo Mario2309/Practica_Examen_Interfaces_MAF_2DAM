@@ -6,6 +6,7 @@
     Private Sub AlquilarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlquilarToolStripMenuItem.Click
         ModuloCambioNombreFormularios.alquilar()
         ModuloCambioEstadoAlquiler.alquilar()
+        ModuloAccionesTablaAlquileres.cargarTitulosAlComboBox()
     End Sub
 
     Private Sub DevolverToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevolverToolStripMenuItem.Click
@@ -40,5 +41,20 @@
 
     Private Sub btnAccionAlquileres_Click(sender As Object, e As EventArgs) Handles btnAccionAlquileres.Click
         ModuloCambioEstadoAlquiler.accionBnt()
+    End Sub
+
+    Private Sub tbDNI_TextChanged(sender As Object, e As EventArgs) Handles tbDNI.TextChanged
+
+    End Sub
+
+    Private Sub btnBuscarDNI_Click(sender As Object, e As EventArgs) Handles btnBuscarDNI.Click
+        If Text = "Devolver Pelicula" Then
+            ModuloAccionesTablaAlquileres.CargarPeliculasAlquiladasSocioCB(tbDNI.Text.Trim())
+            cbPeliculas.Enabled = True
+        End If
+    End Sub
+
+    Private Sub cbPeliculas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPeliculas.SelectedIndexChanged
+
     End Sub
 End Class

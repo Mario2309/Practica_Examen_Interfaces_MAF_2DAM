@@ -65,6 +65,8 @@
     Public Sub accionBnt()
         If FormAlquiler.Text = "Alquilar Pelicula" Then
             ModuloAccionesTablaAlquileres.Agregar()
+        ElseIf FormAlquiler.Text = "Devolver Pelicula" Then
+            ModuloAccionesTablaAlquileres.devolver()
         End If
     End Sub
 End Module
