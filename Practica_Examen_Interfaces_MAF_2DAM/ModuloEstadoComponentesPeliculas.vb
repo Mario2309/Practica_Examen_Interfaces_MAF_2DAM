@@ -27,6 +27,10 @@
         FormPeliculas.nudAnio.Visible = True
         FormPeliculas.nudCalificacion.Visible = True
         FormPeliculas.tbDescripcion.Visible = True
+        FormPeliculas.btnAccionPelicula.Visible = True
+        FormPeliculas.btnAccionPelicula.Enabled = True
+        FormPeliculas.btnLimpiezaPeliculas.Visible = True
+        FormPeliculas.btnLimpiezaPeliculas.Enabled = True
     End Sub
     Public Sub eliminarPelicula()
         FormPeliculas.tbTitulo.Visible = False
@@ -55,6 +59,10 @@
         FormPeliculas.nudAnio.Visible = True
         FormPeliculas.nudCalificacion.Visible = True
         FormPeliculas.tbDescripcion.Visible = True
+        FormPeliculas.btnAccionPelicula.Visible = True
+        FormPeliculas.btnAccionPelicula.Enabled = True
+        FormPeliculas.btnLimpiezaPeliculas.Visible = True
+        FormPeliculas.btnLimpiezaPeliculas.Enabled = True
     End Sub
     Public Sub modificarrPelicula()
         FormPeliculas.tbTitulo.Visible = False
@@ -83,6 +91,10 @@
         FormPeliculas.nudAnio.Visible = True
         FormPeliculas.nudCalificacion.Visible = True
         FormPeliculas.tbDescripcion.Visible = True
+        FormPeliculas.btnAccionPelicula.Visible = True
+        FormPeliculas.btnAccionPelicula.Enabled = True
+        FormPeliculas.btnLimpiezaPeliculas.Visible = True
+        FormPeliculas.btnLimpiezaPeliculas.Enabled = True
     End Sub
     Public Sub consultarPeliculaConc()
         FormPeliculas.tbTitulo.Visible = False
@@ -111,6 +123,7 @@
         FormPeliculas.nudAnio.Visible = True
         FormPeliculas.nudCalificacion.Visible = True
         FormPeliculas.tbDescripcion.Visible = True
+        FormPeliculas.btnLimpiezaPeliculas.Visible = True
     End Sub
     Public Sub consultarPeliculas()
         FormPeliculas.cbTitulo.Visible = False
@@ -137,6 +150,10 @@
     Public Sub accionBtn()
         If FormPeliculas.Text = "Agregar Pelicula" Then
             ModuloAccionesTablaPeliculas.Agregar()
+        ElseIf FormPeliculas.Text = "Eliminar Pelicula" Then
+            ModuloAccionesTablaPeliculas.eliminar()
+        ElseIf FormPeliculas.Text = "Modificar Pelicula" Then
+            ModuloAccionesTablaPeliculas.Modificar()
         End If
     End Sub
 End Module
