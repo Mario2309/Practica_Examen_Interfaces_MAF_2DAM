@@ -51,6 +51,9 @@
         If Text = "Devolver Pelicula" Then
             ModuloAccionesTablaAlquileres.CargarPeliculasAlquiladasSocioCB(tbDNI.Text.Trim())
             cbPeliculas.Enabled = True
+        ElseIf Text = "Consultar Alquileres de un Socio" Then
+            ModuloAccionesTablaAlquileres.CargarAlListViewAlquiler(ModuloAccionesTablaSocios.devolverIdMedianteDNI(tbDNI.Text.Trim()))
+
         End If
     End Sub
 

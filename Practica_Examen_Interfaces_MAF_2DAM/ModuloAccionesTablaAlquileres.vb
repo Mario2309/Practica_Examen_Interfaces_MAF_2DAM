@@ -27,9 +27,35 @@ Module ModuloAccionesTablaAlquileres
         Next
     End Sub
 
+    Public Sub CargarAlListViewAlquiler(idSocio As String)
+        Dim ListaPeliculas As ListViewItem
+
+        FormAlquiler.lwAlquileres.Items.Clear()
+
+        ' Verificamos si hay datos disponibles
+        If DatosConjuntos Is Nothing OrElse DatosConjuntos.Tables.Count = 0 Then
+            MessageBox.Show("No hay datos disponibles para mostrar en el ListView.")
+            Exit Sub
+        End If
+
+        ' Iteramos sobre las filas de la tabla
+        For pos As Integer = 0 To DatosConjuntos.Tables(0).Rows.Count - 1
+            ' Comprobamos si el id_socio de la fila actual coincide con el id_socio que se pasa a la función
+            If DatosConjuntos.Tables(0).Rows(pos).Item("SOCIO").ToString() = idSocio Then
+                ' Si coincide, agregamos los datos al ListView
+                ListaPeliculas = FormAlquiler.lwAlquileres.Items.Add(DatosConjuntos.Tables(0).Rows(pos).Item(0).ToString())
+
+                ' Agregamos las columnas restantes al ListView
+                For col As Integer = 1 To DatosConjuntos.Tables(0).Columns.Count - 1
+                    ListaPeliculas.SubItems.Add(DatosConjuntos.Tables(0).Rows(pos).Item(col).ToString())
+                Next
+            End If
+        Next
+    End Sub
+
+
     Public Sub limpiar()
         FormAlquiler.tbDNI.Clear()
-        FormAlquiler.cbPeliculas.SelectedIndex = 0
     End Sub
 
     Public Sub Agregar()
