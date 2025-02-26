@@ -7,6 +7,7 @@ Module ModuloAccionesTablaAlquileres
     Public cadenaConsultarTitulos As String = "SELECT titulo FROM peliculas"
     Private CadenaConsultarPelisAlquiladas As String = "SELECT peliculas.titulo FROM Alquileres INNER JOIN peliculas ON Alquileres.id_pelicula = peliculas.id_peliculas WHERE Alquileres.id_socio = @idS AND estado = 'Alquilado' "
     Private cadenaUpdateEstado As String = "update Alquileres set fecha_devolucion=@fD, estado=@est WHERE id_socio=@idS AND id_pelicula=@idP"
+    Private CadenaAlquileresSocios As String = "SELECT * FROM Alquileres WHERE id_socio = @idS"
 
     Public Sub CargarAlListViewAlquiler()
         Dim ListaPeliculas As ListViewItem
@@ -28,30 +29,57 @@ Module ModuloAccionesTablaAlquileres
     End Sub
 
     Public Sub CargarAlListViewAlquiler(idSocio As String)
-        Dim ListaPeliculas As ListViewItem
-
-        FormAlquiler.lwAlquileres.Items.Clear()
-
-        ' Verificamos si hay datos disponibles
-        If DatosConjuntos Is Nothing OrElse DatosConjuntos.Tables.Count = 0 Then
-            MessageBox.Show("No hay datos disponibles para mostrar en el ListView.")
-            Exit Sub
-        End If
-
-        ' Iteramos sobre las filas de la tabla
-        For pos As Integer = 0 To DatosConjuntos.Tables(0).Rows.Count - 1
-            ' Comprobamos si el id_socio de la fila actual coincide con el id_socio que se pasa a la función
-            If DatosConjuntos.Tables(0).Rows(pos).Item("SOCIO").ToString() = idSocio Then
-                ' Si coincide, agregamos los datos al ListView
-                ListaPeliculas = FormAlquiler.lwAlquileres.Items.Add(DatosConjuntos.Tables(0).Rows(pos).Item(0).ToString())
-
-                ' Agregamos las columnas restantes al ListView
-                For col As Integer = 1 To DatosConjuntos.Tables(0).Columns.Count - 1
-                    ListaPeliculas.SubItems.Add(DatosConjuntos.Tables(0).Rows(pos).Item(col).ToString())
-                Next
+        Try
+            ' Verificar si la conexión está cerrada, y abrirla si es necesario
+            If ModuloConexionBaseDeDatos.ConexionNueva.State = ConnectionState.Closed Then
+                ModuloConexionBaseDeDatos.ConexionNueva.Open()
             End If
-        Next
+
+            ' Usamos una consulta SELECT para obtener los datos de alquiler
+            Dim Comando As New SQLiteCommand(CadenaAlquileresSocios, ModuloConexionBaseDeDatos.ConexionNueva)
+            Comando.Parameters.AddWithValue("@idS", idSocio)
+
+            ' Llenamos el DataSet con los resultados de la consulta
+            Dim DatosConjuntos As New DataSet()
+            Using adapter As New SQLiteDataAdapter(Comando)
+                adapter.Fill(DatosConjuntos)
+            End Using
+
+            ' Limpiamos los datos previos en el ListView
+            FormAlquiler.lwAlquileres.Items.Clear()
+
+            ' Verificamos si el DataSet tiene datos
+            If DatosConjuntos.Tables.Count = 0 OrElse DatosConjuntos.Tables(0).Rows.Count = 0 Then
+                MessageBox.Show("No hay datos disponibles para mostrar en el ListView.")
+                Exit Sub
+            End If
+
+            ' Recorremos cada fila y agregamos los datos al ListView
+            For Each row As DataRow In DatosConjuntos.Tables(0).Rows
+                ' Creamos un nuevo ListViewItem con el primer valor de la fila
+                Dim ListaPeliculas As New ListViewItem(row(0).ToString()) ' Agregamos la primera columna como el ítem principal
+
+                ' Agregamos las demás columnas como subelementos
+                For col As Integer = 1 To DatosConjuntos.Tables(0).Columns.Count - 1
+                    ListaPeliculas.SubItems.Add(row(col).ToString())
+                Next
+
+                ' Agregamos el ListViewItem al ListView
+                FormAlquiler.lwAlquileres.Items.Add(ListaPeliculas)
+            Next
+
+        Catch ex As Exception
+            ' Mostrar un mensaje de error si algo sale mal
+            MessageBox.Show("Error al agregar datos: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Asegurarse de cerrar la conexión al final del proceso
+            If ModuloConexionBaseDeDatos.ConexionNueva.State = ConnectionState.Open Then
+                ModuloConexionBaseDeDatos.ConexionNueva.Close()
+            End If
+        End Try
     End Sub
+
+
 
 
     Public Sub limpiar()

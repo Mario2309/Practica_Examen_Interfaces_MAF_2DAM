@@ -15,11 +15,13 @@
     End Sub
 
     Private Sub ConcultarAlquileresDeUnSocioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConcultarAlquileresDeUnSocioToolStripMenuItem.Click
+        lwAlquileres.Items.Clear()
         ModuloCambioNombreFormularios.consultarAlquileresSocioConc()
         ModuloCambioEstadoAlquiler.alquileresSocioConc()
     End Sub
 
     Private Sub HistorialDeAlquileresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDeAlquileresToolStripMenuItem.Click
+        lwAlquileres.Items.Clear()
         ModuloCambioNombreFormularios.historialAlquileres()
         ModuloCambioEstadoAlquiler.alquileresTotales()
         ModuloConexionBaseDeDatos.ConectarBD(ModuloAccionesTablaAlquileres.CadenaConsultarAlquileres)
