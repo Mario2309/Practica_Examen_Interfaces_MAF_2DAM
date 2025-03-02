@@ -41,6 +41,9 @@ Module ModuloAccionesTablaPeliculas
             FormPeliculas.cbTitulo.Enabled = True
             FormPeliculas.btnBuscarPelicula.Visible = True
             FormPeliculas.cbTitulo.Visible = True
+            If FormPeliculas.Text = "Modificar Pelicula" Then
+                ModuloEstadoComponentesPeliculas.modificarrPelicula()
+            End If
         End If
     End Sub
 
