@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SQLite
 
 Module ModuloConexionBaseDeDatos
-    Public CadenaConexion As String = "Data Source=C:\Users\alvar\source\repos\Practica_Examen_Interfaces_MAF_2DAM\Practica_Examen_Interfaces_MAF_2DAM\VideoClub_Interface.db; Version=3"
+    Public CadenaConexion As String = "Data Source=C:\Users\alvar\source\repos\Practica_Examen_Interfaces_MAF_2DAM\Practica_Examen_Interfaces_MAF_2DAM\Resources\VideoClub_Interface.db; Version=3"
     Public ConexionNueva As New SQLiteConnection(CadenaConexion)
 
     Public AdaptadorDatos As SQLiteDataAdapter

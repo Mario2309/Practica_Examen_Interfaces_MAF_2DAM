@@ -248,7 +248,7 @@ Module ModuloAccionesTablaPeliculas
 
             Comando.ExecuteNonQuery()
 
-
+            MessageBox.Show("Película eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             limpiar()
         Catch ex As Exception
             MessageBox.Show("Error al eliminar datos: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

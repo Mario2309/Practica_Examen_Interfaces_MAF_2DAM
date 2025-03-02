@@ -127,6 +127,7 @@
         FormSocios.tbCorreo.Enabled = False
         FormSocios.dtpNacimiento.Enabled = False
         FormSocios.cbEstado.Enabled = False
+        FormSocios.btnLimpiezaSocio.Visible = True
         FormSocios.btnAccionSocio.Enabled = False
     End Sub
     Public Sub consultarSocios()

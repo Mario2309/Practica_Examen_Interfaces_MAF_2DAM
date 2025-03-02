@@ -26,20 +26,16 @@ Partial Class FormularioElecAccion
         Me.btnAbrirPeliculas = New System.Windows.Forms.Button()
         Me.btnAbrirSocios = New System.Windows.Forms.Button()
         Me.btnAbrirAlquiler = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnVolverInicio = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(290, 72)
+        Me.lblTitle.Location = New System.Drawing.Point(290, 26)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(227, 36)
         Me.lblTitle.TabIndex = 1
@@ -49,7 +45,7 @@ Partial Class FormularioElecAccion
         '
         Me.btnAbrirPeliculas.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnAbrirPeliculas.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnAbrirPeliculas.Location = New System.Drawing.Point(94, 295)
+        Me.btnAbrirPeliculas.Location = New System.Drawing.Point(94, 332)
         Me.btnAbrirPeliculas.Name = "btnAbrirPeliculas"
         Me.btnAbrirPeliculas.Size = New System.Drawing.Size(111, 35)
         Me.btnAbrirPeliculas.TabIndex = 2
@@ -60,7 +56,7 @@ Partial Class FormularioElecAccion
         '
         Me.btnAbrirSocios.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnAbrirSocios.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnAbrirSocios.Location = New System.Drawing.Point(349, 295)
+        Me.btnAbrirSocios.Location = New System.Drawing.Point(349, 332)
         Me.btnAbrirSocios.Name = "btnAbrirSocios"
         Me.btnAbrirSocios.Size = New System.Drawing.Size(111, 35)
         Me.btnAbrirSocios.TabIndex = 3
@@ -71,36 +67,23 @@ Partial Class FormularioElecAccion
         '
         Me.btnAbrirAlquiler.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnAbrirAlquiler.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnAbrirAlquiler.Location = New System.Drawing.Point(608, 295)
+        Me.btnAbrirAlquiler.Location = New System.Drawing.Point(608, 332)
         Me.btnAbrirAlquiler.Name = "btnAbrirAlquiler"
         Me.btnAbrirAlquiler.Size = New System.Drawing.Size(111, 35)
         Me.btnAbrirAlquiler.TabIndex = 4
         Me.btnAbrirAlquiler.Text = "Alquiler"
         Me.btnAbrirAlquiler.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(94, 163)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(110, 101)
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(349, 163)
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Image = Global.Practica_Examen_Interfaces_MAF_2DAM.My.Resources.Resources.Logo_Mario_S_Films
+        Me.PictureBox2.Location = New System.Drawing.Point(277, 79)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(111, 101)
+        Me.PictureBox2.Size = New System.Drawing.Size(258, 235)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Location = New System.Drawing.Point(608, 163)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(111, 101)
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
         '
         'btnVolverInicio
         '
@@ -120,9 +103,7 @@ Partial Class FormularioElecAccion
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnVolverInicio)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnAbrirAlquiler)
         Me.Controls.Add(Me.btnAbrirSocios)
         Me.Controls.Add(Me.btnAbrirPeliculas)
@@ -131,9 +112,7 @@ Partial Class FormularioElecAccion
         Me.MinimizeBox = False
         Me.Name = "FormularioElecAccion"
         Me.Text = "Menu Acciones"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -143,8 +122,6 @@ Partial Class FormularioElecAccion
     Friend WithEvents btnAbrirPeliculas As Button
     Friend WithEvents btnAbrirSocios As Button
     Friend WithEvents btnAbrirAlquiler As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnVolverInicio As Button
 End Class

@@ -40,6 +40,13 @@ Module ModuloAccionesTablaSocios
         FormSocios.tbTelefono.Clear()
         FormSocios.tbCorreo.Clear()
         FormSocios.cbEstado.SelectedIndex = 0
+        If FormSocios.Text = "Eliminar Socio" Or FormSocios.Text = "Consultar Socio" Or FormSocios.Text = "Modificar Socio" Then
+            FormSocios.cbDNI.Visible = True
+            FormSocios.btnBuscarSocio.Visible = True
+            If FormSocios.Text = "Modificar Socio" Then
+                ModuloEstadoComponentesSocios.modificarSocio()
+            End If
+        End If
     End Sub
 
     Public Sub Agregar()
@@ -251,7 +258,7 @@ Module ModuloAccionesTablaSocios
 
             Comando.ExecuteNonQuery()
 
-
+            MessageBox.Show("Socio eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             limpiar()
 
         Catch ex As Exception
