@@ -3,9 +3,8 @@
         FormularioInicio.Hide()
         FormularioElecAccion.Show()
     End Sub
-    Public Sub volverInicio()
-        FormularioInicio.Show()
-        FormularioElecAccion.Hide()
+    Public Sub Salir()
+        Application.Exit()
     End Sub
     Public Sub volverMenuPeliculas()
         FormPeliculas.Hide()

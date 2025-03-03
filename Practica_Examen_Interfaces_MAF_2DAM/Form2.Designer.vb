@@ -93,7 +93,7 @@ Partial Class FormularioElecAccion
         Me.btnVolverInicio.Name = "btnVolverInicio"
         Me.btnVolverInicio.Size = New System.Drawing.Size(111, 35)
         Me.btnVolverInicio.TabIndex = 8
-        Me.btnVolverInicio.Text = "Volver"
+        Me.btnVolverInicio.Text = "Salir"
         Me.btnVolverInicio.UseVisualStyleBackColor = True
         '
         'FormularioElecAccion

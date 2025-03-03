@@ -5,8 +5,8 @@
     End Sub
 
     Private Sub btnVolverInicio_Click(sender As Object, e As EventArgs) Handles btnVolverInicio.Click
-        MovimientoEntreFormularios.volverInicio()
         ModuloConexionBaseDeDatos.DesconectarBD()
+        MovimientoEntreFormularios.Salir()
     End Sub
 
     Private Sub btnAbrirSocios_Click(sender As Object, e As EventArgs) Handles btnAbrirSocios.Click
