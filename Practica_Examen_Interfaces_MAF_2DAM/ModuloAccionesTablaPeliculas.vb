@@ -10,6 +10,7 @@ Module ModuloAccionesTablaPeliculas
     Public cadenaConsultarTitulos As String = "SELECT titulo FROM peliculas"
     Private cadenaConsIdPorTitulo As String = "SELECT id_peliculas FROM peliculas WHERE titulo = @Tl"
 
+    ' Método que carga todas las películas en un ListView desde la base de datos
     Public Sub CargarAlListViewPeliculas()
         Dim ListaPeliculas As ListViewItem
 
@@ -29,6 +30,7 @@ Module ModuloAccionesTablaPeliculas
         Next
     End Sub
 
+    ' Método que limpia los campos del formulario
     Public Sub limpiar()
         FormPeliculas.tbTitulo.Clear()
         FormPeliculas.tbDirector.Clear()
@@ -47,7 +49,7 @@ Module ModuloAccionesTablaPeliculas
         End If
     End Sub
 
-
+    ' Método que agrega una nueva película a la base de datos
     Public Sub Agregar()
         Try
             ' Verificar conexión
@@ -107,7 +109,7 @@ Module ModuloAccionesTablaPeliculas
         End Try
     End Sub
 
-
+    ' Método que valida los campos del formulario para asegurarse de que no estén vacíos
     Private Sub validarCampos()
         If String.IsNullOrWhiteSpace(FormPeliculas.tbTitulo.Text) OrElse
                    String.IsNullOrWhiteSpace(FormPeliculas.tbDirector.Text) OrElse
@@ -121,6 +123,7 @@ Module ModuloAccionesTablaPeliculas
         End If
     End Sub
 
+    ' Método que carga los títulos de las películas al ComboBox
     Public Sub cargarTitulosAlComboBox()
         Try
             ' Verificar conexión
@@ -156,7 +159,7 @@ Module ModuloAccionesTablaPeliculas
         End Try
     End Sub
 
-
+    ' Función que devuelve el ID de una película mediante su título
     Public Function devolverIdMedianteTitulo(titulo As String) As Integer
         Dim id As Integer = -1 ' Valor por defecto en caso de no encontrar el resultado
         Try
@@ -190,6 +193,7 @@ Module ModuloAccionesTablaPeliculas
         Return id
     End Function
 
+    ' Método que carga los datos de una película en el formulario utilizando su ID
     Public Sub cargarCampos(id As String)
         Try
             ' Verificar conexión
@@ -236,6 +240,7 @@ Module ModuloAccionesTablaPeliculas
         End Try
     End Sub
 
+    ' Método que elimina una película de la base de datos
     Public Sub eliminar()
         Try
             ' Verificar conexión
@@ -263,6 +268,7 @@ Module ModuloAccionesTablaPeliculas
         End Try
     End Sub
 
+    ' Método que modifica una película de la base de datos
     Public Sub Modificar()
         Try
             ' Verificar conexión
@@ -323,6 +329,7 @@ Module ModuloAccionesTablaPeliculas
         End Try
     End Sub
 
+    ' Método que habilita los campos para poder modificar una pelicula
     Public Sub ActivarCamposModificarPelis()
         FormPeliculas.tbDirector.Enabled = True
         FormPeliculas.cbGenero.Enabled = True
