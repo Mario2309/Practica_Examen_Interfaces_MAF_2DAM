@@ -1,4 +1,5 @@
 ﻿Module ModuloEstadoComponentesPeliculas
+    ' Método que configura la interfaz para agregar una nueva película
     Public Sub agregarPelicula()
         FormPeliculas.tbTitulo.Visible = True
         FormPeliculas.cbTitulo.Visible = False
@@ -32,6 +33,7 @@
         FormPeliculas.btnLimpiezaPeliculas.Visible = True
         FormPeliculas.btnLimpiezaPeliculas.Enabled = True
     End Sub
+    ' Método que configura la interfaz para eliminar una película
     Public Sub eliminarPelicula()
         FormPeliculas.tbTitulo.Visible = False
         FormPeliculas.cbTitulo.Visible = True
@@ -64,6 +66,7 @@
         FormPeliculas.btnLimpiezaPeliculas.Visible = True
         FormPeliculas.btnLimpiezaPeliculas.Enabled = True
     End Sub
+    ' Método que configura la interfaz para modificar una película
     Public Sub modificarrPelicula()
         FormPeliculas.tbTitulo.Visible = False
         FormPeliculas.cbTitulo.Visible = True
@@ -96,6 +99,7 @@
         FormPeliculas.btnLimpiezaPeliculas.Visible = True
         FormPeliculas.btnLimpiezaPeliculas.Enabled = True
     End Sub
+    ' Método que configura la interfaz para consultar una película
     Public Sub consultarPeliculaConc()
         FormPeliculas.tbTitulo.Visible = False
         FormPeliculas.cbTitulo.Visible = True
@@ -125,6 +129,7 @@
         FormPeliculas.tbDescripcion.Visible = True
         FormPeliculas.btnLimpiezaPeliculas.Visible = True
     End Sub
+    ' Método que configura la interfaz para ver todas las películas
     Public Sub consultarPeliculas()
         FormPeliculas.cbTitulo.Visible = False
         FormPeliculas.tbTitulo.Visible = False
@@ -147,6 +152,7 @@
         FormPeliculas.lblDescripcion.Visible = False
     End Sub
 
+    ' Método que ejecuta la acción correspondiente según el título del formulario (Agregar, Eliminar, Modificar)
     Public Sub accionBtn()
         If FormPeliculas.Text = "Agregar Pelicula" Then
             ModuloAccionesTablaPeliculas.Agregar()
