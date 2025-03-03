@@ -9,6 +9,7 @@ Module ModuloAccionesTablaAlquileres
     Private cadenaUpdateEstado As String = "update Alquileres set fecha_devolucion=@fD, estado=@est WHERE id_socio=@idS AND id_pelicula=@idP"
     Private CadenaAlquileresSocios As String = "SELECT * FROM Alquileres WHERE id_socio = @idS"
 
+    ' Método para cargar los alquileres en el ListView en el formulario de alquiler
     Public Sub CargarAlListViewAlquiler()
         Dim ListaPeliculas As ListViewItem
 
@@ -28,6 +29,7 @@ Module ModuloAccionesTablaAlquileres
         Next
     End Sub
 
+    ' Método para cargar los alquileres de un socio en el ListView
     Public Sub CargarAlListViewAlquiler(idSocio As String)
         Try
             ' Verificar si la conexión está cerrada, y abrirla si es necesario
@@ -79,13 +81,12 @@ Module ModuloAccionesTablaAlquileres
         End Try
     End Sub
 
-
-
-
+    ' Método para limpiar el formulario de alquileres
     Public Sub limpiar()
         FormAlquiler.tbDNI.Clear()
     End Sub
 
+    ' Método para agregar un nuevo alquiler
     Public Sub Agregar()
         Try
             ' Verificar conexión
@@ -157,6 +158,7 @@ Module ModuloAccionesTablaAlquileres
         End Try
     End Sub
 
+    ' Método para cargar los títulos de las películas en el ComboBox
     Public Sub cargarTitulosAlComboBox()
         Try
             ' Verificar conexión
@@ -193,6 +195,7 @@ Module ModuloAccionesTablaAlquileres
         End Try
     End Sub
 
+    ' Método para cargar las películas alquiladas de un socio en el ComboBox
     Public Sub CargarPeliculasAlquiladasSocioCB(dni As String)
         Try
             ' Verificar conexión
@@ -244,6 +247,7 @@ Module ModuloAccionesTablaAlquileres
         End Try
     End Sub
 
+    ' Método para registrar la devolución de una película
     Public Sub devolver()
         Try
             ' Verificar conexión

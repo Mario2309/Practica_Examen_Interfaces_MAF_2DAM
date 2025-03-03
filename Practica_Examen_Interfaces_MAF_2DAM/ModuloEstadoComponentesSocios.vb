@@ -1,4 +1,5 @@
 ﻿Module ModuloEstadoComponentesSocios
+    ' Método para configurar los componentes de la interfaz cuando se agrega un nuevo socio
     Public Sub agregarSocio()
         FormSocios.lblDNI.Visible = True
         FormSocios.tbDNI.Visible = True
@@ -33,6 +34,7 @@
         FormSocios.cbEstado.Enabled = True
         FormSocios.btnAccionSocio.Enabled = True
     End Sub
+    ' Método para configurar los componentes de la interfaz cuando se va a modificar un socio
     Public Sub modificarSocio()
         FormSocios.lblDNI.Visible = True
         FormSocios.tbDNI.Visible = False
@@ -65,6 +67,7 @@
         FormSocios.btnAccionSocio.Enabled = False
         FormSocios.btnAccionSocio.Text = "Modificar"
     End Sub
+    ' Método para configurar los componentes de la interfaz cuando se va a eliminar un socio
     Public Sub eliminarSocio()
         FormSocios.lblDNI.Visible = True
         FormSocios.tbDNI.Visible = False
@@ -98,6 +101,7 @@
         FormSocios.btnAccionSocio.Text = "Eliminar"
     End Sub
 
+    ' Método para configurar los componentes de la interfaz cuando se va a consultar un socio
     Public Sub consultarSocioConc()
         FormSocios.lblDNI.Visible = True
         FormSocios.tbDNI.Visible = False
@@ -130,6 +134,7 @@
         FormSocios.btnLimpiezaSocio.Visible = True
         FormSocios.btnAccionSocio.Enabled = False
     End Sub
+    ' Método para ocultar todos los campos de edición y mostrar solo la lista de socios
     Public Sub consultarSocios()
         FormSocios.lblDNI.Visible = False
         FormSocios.tbDNI.Visible = False
@@ -155,6 +160,7 @@
         FormSocios.btnLimpiezaSocio.Visible = False
     End Sub
 
+    ' Método para determinar la acción a realizar (Agregar, Modificar o Eliminar) según el título del formulario
     Public Sub acctionBtn()
         If FormSocios.Text = "Agregar Socio" Then
             ModuloAccionesTablaSocios.Agregar()

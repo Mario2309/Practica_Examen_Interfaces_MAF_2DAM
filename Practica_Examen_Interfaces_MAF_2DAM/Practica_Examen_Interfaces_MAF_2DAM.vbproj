@@ -154,7 +154,6 @@
     <Compile Include="ModuloConexionBaseDeDatos.vb" />
     <Compile Include="ModuloEstadoComponentesPeliculas.vb" />
     <Compile Include="ModuloEstadoComponentesSocios.vb" />
-    <Compile Include="ModuloMetodosCompartidos.vb" />
     <Compile Include="MovimientoEntreFormularios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

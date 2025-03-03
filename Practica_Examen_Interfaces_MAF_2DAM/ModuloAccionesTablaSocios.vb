@@ -10,9 +10,7 @@ Module ModuloAccionesTablaSocios
     Private cadenaConsultarPorDnis As String = "SELECT Nombre, Apellido, DNI, Direccion, Telefono, Email, Fecha_Nacimiento, Fecha_Registro, Estado FROM Socios WHERE ID_Socio = @idS"
     Private cadenaConsIdPorTitulo As String = "SELECT ID_Socio FROM Socios WHERE DNI = @dni"
 
-
-
-
+    ' Método para cargar los socios en el ListView en el formulario de socios
     Public Sub CargarAlListViewSocios()
         Dim ListaPeliculas As ListViewItem
 
@@ -32,6 +30,7 @@ Module ModuloAccionesTablaSocios
         Next
     End Sub
 
+    ' Método para limpiar los campos del formulario de socios
     Public Sub limpiar()
         FormSocios.tbDNI.Clear()
         FormSocios.tbNombre.Clear()
@@ -49,6 +48,7 @@ Module ModuloAccionesTablaSocios
         End If
     End Sub
 
+    ' Método para agregar un nuevo socio a la base de datos
     Public Sub Agregar()
         Try
             ' Verificar conexión
@@ -113,7 +113,7 @@ Module ModuloAccionesTablaSocios
         End Try
     End Sub
 
-
+    ' Método para validar los campos del formulario de socios
     Private Sub validarCampos()
         If String.IsNullOrWhiteSpace(FormPeliculas.tbTitulo.Text) OrElse
                    String.IsNullOrWhiteSpace(FormPeliculas.tbDirector.Text) OrElse
@@ -127,6 +127,7 @@ Module ModuloAccionesTablaSocios
         End If
     End Sub
 
+    ' Método para cargar los DNI en el ComboBox de socios
     Public Sub cargarNombresAlComboBox()
         Try
             ' Verificar conexión
@@ -162,6 +163,7 @@ Module ModuloAccionesTablaSocios
         End Try
     End Sub
 
+    ' Función para obtener el ID de un socio mediante su DNI
     Public Function devolverIdMedianteDNI(dni As String) As Integer
         Dim id As Integer = -1 ' Valor por defecto en caso de no encontrar el resultado
         Try
@@ -195,6 +197,7 @@ Module ModuloAccionesTablaSocios
         Return id
     End Function
 
+    ' Método para cargar los campos de un socio a partir de su ID
     Public Sub cargarCampos(id As String)
         Try
             ' Verificar conexión
@@ -243,6 +246,7 @@ Module ModuloAccionesTablaSocios
         End Try
     End Sub
 
+    ' Método para eliminar un socio de la base de datos
     Public Sub eliminar()
         Try
             ' Verificar conexión
@@ -271,6 +275,7 @@ Module ModuloAccionesTablaSocios
         End Try
     End Sub
 
+    ' Método para modificar un socio en la base de datos
     Public Sub Modificar()
         Try
             ' Verificar conexión
@@ -321,6 +326,7 @@ Module ModuloAccionesTablaSocios
         End Try
     End Sub
 
+    ' Método para habilitar los campos del formulario de socios
     Public Sub activarCampos()
         FormSocios.tbNombre.Enabled = True
         FormSocios.tbApellido.Enabled = True

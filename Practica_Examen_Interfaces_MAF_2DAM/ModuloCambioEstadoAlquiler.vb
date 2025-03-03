@@ -1,4 +1,5 @@
 ﻿Module ModuloCambioEstadoAlquiler
+    ' Método para configurar los componentes de la interfaz cuando se va a alquilar una película
     Public Sub alquilar()
         FormAlquiler.Width = 557
         FormAlquiler.Height = 228
@@ -15,6 +16,7 @@
         FormAlquiler.btnLimpiar.Visible = False
     End Sub
 
+    ' Método para configurar los componentes de la interfaz cuando se va a devolver una película
     Public Sub devolver()
         FormAlquiler.Width = 557
         FormAlquiler.Height = 228
@@ -31,6 +33,7 @@
         FormAlquiler.btnLimpiar.Visible = False
     End Sub
 
+    ' Método para configurar los componentes de la interfaz cuando se van a consultar los alquileres de un socio
     Public Sub alquileresSocioConc()
         FormAlquiler.Width = 557
         FormAlquiler.Height = 373
@@ -46,6 +49,7 @@
         FormAlquiler.btnLimpiar.Visible = True
     End Sub
 
+    ' Método para configurar los componentes de la interfaz cuando se van a consultar todos los alquileres
     Public Sub alquileresTotales()
         FormAlquiler.Width = 557
         FormAlquiler.Height = 373
@@ -62,6 +66,7 @@
     End Sub
 
 
+    ' Método para determinar la acción a realizar (Alquilar o Devolver) según el título del formulario
     Public Sub accionBnt()
         If FormAlquiler.Text = "Alquilar Pelicula" Then
             ModuloAccionesTablaAlquileres.Agregar()

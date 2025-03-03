@@ -8,9 +8,7 @@ Module ModuloConexionBaseDeDatos
     Public DatosConjuntos As DataSet
     Public fila As DataRow
 
-
-
-
+    ' Método para conectar a la base de datos, ejecutar una consulta y llenar un DataSet con los resultados
     Public Sub ConectarBD(CadenaConsultar As String)
         Try
             If String.IsNullOrWhiteSpace(CadenaConexion) Then
@@ -34,6 +32,7 @@ Module ModuloConexionBaseDeDatos
         End Try
     End Sub
 
+    ' Método para desconectar de la base de datos
     Public Sub DesconectarBD()
         Try
             If ConexionNueva IsNot Nothing AndAlso ConexionNueva.State = ConnectionState.Open Then
