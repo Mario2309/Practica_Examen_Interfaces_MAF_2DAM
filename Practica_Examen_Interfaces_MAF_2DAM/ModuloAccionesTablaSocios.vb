@@ -57,7 +57,7 @@ Module ModuloAccionesTablaSocios
             End If
 
             ' Validar campos
-
+            validarCampos()
             ' Convertir valores de fecha de alquiler
             Dim fechaAlquiler As Date
 
@@ -115,12 +115,14 @@ Module ModuloAccionesTablaSocios
 
     ' Método para validar los campos del formulario de socios
     Private Sub validarCampos()
-        If String.IsNullOrWhiteSpace(FormPeliculas.tbTitulo.Text) OrElse
-                   String.IsNullOrWhiteSpace(FormPeliculas.tbDirector.Text) OrElse
-                   String.IsNullOrWhiteSpace(FormPeliculas.cbGenero.Text) OrElse
-                   String.IsNullOrWhiteSpace(FormPeliculas.nudAnio.Text) OrElse
-                   String.IsNullOrWhiteSpace(FormPeliculas.nudCalificacion.Text) OrElse
-                   String.IsNullOrWhiteSpace(FormPeliculas.tbDescripcion.Text) Then
+        If String.IsNullOrWhiteSpace(FormSocios.tbDNI.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.tbNombre.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.tbApellido.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.tbDireccion.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.tbTelefono.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.tbCorreo.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.dtpNacimiento.Text) OrElse
+                   String.IsNullOrWhiteSpace(FormSocios.cbDNI.Text) Then
 
             MessageBox.Show("Todos los campos deben estar completos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
@@ -284,7 +286,7 @@ Module ModuloAccionesTablaSocios
             End If
 
             ' Validar campos
-
+            validarCampos()
 
             ' Crear comando SQL
             Dim Comando As New SQLiteCommand(CadenaModificar, ModuloConexionBaseDeDatos.ConexionNueva)

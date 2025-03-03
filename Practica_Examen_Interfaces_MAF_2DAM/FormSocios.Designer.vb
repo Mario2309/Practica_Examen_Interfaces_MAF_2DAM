@@ -366,8 +366,8 @@ Partial Class FormSocios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnBuscarSocio)
         Me.Controls.Add(Me.lwSocios)
+        Me.Controls.Add(Me.btnBuscarSocio)
         Me.Controls.Add(Me.cbDNI)
         Me.Controls.Add(Me.btnLimpiezaSocio)
         Me.Controls.Add(Me.btnAccionSocio)
