@@ -6,6 +6,7 @@ Module ModuloAccionesTablaGeneros
     Public CadenaConsultarNombreGeneros As String = "SELECT nombre_genero FROM generos"
     Public cadenaConsultarIdPorNombre As String = "SELECT id_genero FROM generos WHERE nombre_genero = @genero"
 
+    ' Carga los géneros desde la base de datos al ListView en el formulario de géneros
     Public Sub CargarAlListViewGeneros()
         Dim ListaPeliculas As ListViewItem
 
@@ -25,6 +26,7 @@ Module ModuloAccionesTablaGeneros
         Next
     End Sub
 
+    ' Devuelve el ID de un género mediante su nombre
     Public Function devolverIdMedianteTitulo(genero As String) As Integer
         Dim id As Integer = -1 ' Valor por defecto en caso de no encontrar el resultado
         Try
@@ -58,6 +60,7 @@ Module ModuloAccionesTablaGeneros
         Return id
     End Function
 
+    ' Carga los géneros desde la base de datos al ComboBox en el formulario de películas
     Public Sub cargarGenerosAlComboBox()
         Try
             ' Verificar conexión
