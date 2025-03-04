@@ -33,6 +33,7 @@
         FormSocios.dtpNacimiento.Enabled = True
         FormSocios.cbEstado.Enabled = True
         FormSocios.btnAccionSocio.Enabled = True
+        FormSocios.btnAccionSocio.Visible = True
     End Sub
     ' Método para configurar los componentes de la interfaz cuando se va a modificar un socio
     Public Sub modificarSocio()
@@ -65,6 +66,7 @@
         FormSocios.dtpNacimiento.Enabled = False
         FormSocios.cbEstado.Enabled = False
         FormSocios.btnAccionSocio.Enabled = False
+        FormSocios.btnAccionSocio.Visible = True
         FormSocios.btnAccionSocio.Text = "Modificar"
     End Sub
     ' Método para configurar los componentes de la interfaz cuando se va a eliminar un socio
@@ -98,6 +100,7 @@
         FormSocios.dtpNacimiento.Enabled = False
         FormSocios.cbEstado.Enabled = False
         FormSocios.btnAccionSocio.Enabled = True
+        FormSocios.btnAccionSocio.Visible = True
         FormSocios.btnAccionSocio.Text = "Eliminar"
     End Sub
 
@@ -131,6 +134,7 @@
         FormSocios.tbCorreo.Enabled = False
         FormSocios.dtpNacimiento.Enabled = False
         FormSocios.cbEstado.Enabled = False
+        FormSocios.btnAccionSocio.Visible = True
         FormSocios.btnLimpiezaSocio.Visible = True
         FormSocios.btnAccionSocio.Enabled = False
     End Sub

@@ -52,7 +52,7 @@ Module ModuloAccionesTablaAlquileres
 
             ' Verificamos si el DataSet tiene datos
             If DatosConjuntos.Tables.Count = 0 OrElse DatosConjuntos.Tables(0).Rows.Count = 0 Then
-                MessageBox.Show("No hay datos disponibles para mostrar en el ListView.")
+                MessageBox.Show("DNI no encontrado en la base de datos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Exit Sub
             End If
 
